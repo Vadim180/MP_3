@@ -6,6 +6,7 @@ using MP3_V2.Services;
 using System.Windows.Input;
 using Microsoft.Win32;
 using System.IO;
+using TagLib;
 
 public class MainWindowViewModel : INotifyPropertyChanged
 {
@@ -33,10 +34,11 @@ public class MainWindowViewModel : INotifyPropertyChanged
         FavoriteSongs = new ObservableCollection<Song>();
 
         AddSongsCommand = new RelayCommand(_ => AddSongs());
-
         MusicLibrary = (MusicLibrary)musicLibrary;
-        AddSongsCommand = new RelayCommand(_ => AddSongs());
+
         _musicLibrary = musicLibrary ?? throw new ArgumentNullException(nameof(musicLibrary));
+        AddSongsCommand = new RelayCommand(_ => AddSongs());
+
         _playerState = new PlayerState();
         _playerController = new MusicPlayerController(_playerState, _musicLibrary);
 
@@ -77,11 +79,14 @@ public class MainWindowViewModel : INotifyPropertyChanged
         {
             foreach (var filePath in openFileDialog.FileNames)
             {
-                var newSong = new Song
-                {
-                    Title = Path.GetFileNameWithoutExtension(filePath),
-                    FilePath = filePath
-                };
+                var file = TagLib.File.Create(filePath);
+                var newSong = new Song(
+                    file.Tag.Title ?? Path.GetFileNameWithoutExtension(filePath),
+                    file.Tag.Performers.Length > 0 ? file.Tag.Performers[0] : null,
+                    file.Tag.Pictures.Length > 0 ? "path/to/album/art" : null,
+                    filePath,
+                    false // Можете встановити за замовчуванням або отримати це значення
+                );
 
                 MusicLibrary.AddSong(newSong); // Використовуємо існуючий метод
             }

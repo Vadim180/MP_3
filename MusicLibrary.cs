@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using System;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
@@ -16,24 +17,18 @@ namespace MP3_V2.Services
             Songs = new ObservableCollection<Song>();
         }
 
-        public void AddSong(string filePath)
+        public void AddSong(Song song)  //відповідає за додавання об'єкта Song до колекції Songs
         {
-            if (string.IsNullOrWhiteSpace(filePath)) return;
+            if (song == null)
+                throw new ArgumentNullException(nameof(song));
 
-            var newSong = new Song
-            {
-                Title = Path.GetFileNameWithoutExtension(filePath),
-                FilePath = filePath
-            };
-
-            Songs.Add(newSong);
-        } 
-
-        public void AddSong(Song song)
-        {
+            //перевіряє, чи немає вже пісні з таким самим шляхом до файлу (FilePath) у колекції Songs
             if (!Songs.Any(s => s.FilePath == song.FilePath))
+            {
                 Songs.Add(song);
+            }
         }
+
 
         public void RemoveSong(Song song)
         {

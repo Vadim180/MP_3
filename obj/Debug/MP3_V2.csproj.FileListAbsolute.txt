@@ -33,3 +33,6 @@ C:\Users\roman\source\repos\MP3_V2\bin\Debug\System.Text.Json.xml
 C:\Users\roman\source\repos\MP3_V2\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\roman\source\repos\MP3_V2\bin\Debug\System.ValueTuple.xml
 C:\Users\roman\source\repos\MP3_V2\obj\Debug\MP3_V2.csproj.Up2Date
+C:\Users\roman\source\repos\MP3_V2\bin\Debug\TagLibSharp.dll
+C:\Users\roman\source\repos\MP3_V2\bin\Debug\TagLibSharp.pdb
+C:\Users\roman\source\repos\MP3_V2\bin\Debug\TagLibSharp.xml
