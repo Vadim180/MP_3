@@ -1,15 +1,18 @@
 ﻿using MP3_V2;
+using MP3_V2.Services;
 using System;
 
 public class MusicPlayerController
 {
     private readonly PlayerState _playerState;
     private readonly IMusicLibrary _musicLibrary;
+    private readonly IMusicPlayer _musicPlayer;
 
-    public MusicPlayerController(PlayerState playerState, IMusicLibrary musicLibrary)
+    public MusicPlayerController(PlayerState playerState, IMusicLibrary musicLibrary, IMusicPlayer musicPlayer)
     {
-        _playerState = playerState ?? throw new ArgumentNullException(nameof(playerState));
-        _musicLibrary = musicLibrary ?? throw new ArgumentNullException(nameof(musicLibrary));
+        _playerState = playerState;
+        _musicLibrary = musicLibrary;
+        _musicPlayer = musicPlayer;
     }
 
     public void Play(Song song)
@@ -19,6 +22,7 @@ public class MusicPlayerController
 
         _playerState.CurrentSong = song;
         _playerState.CurrentState = PlaybackState.Playing;
+        _musicPlayer.Play(song);
 
         // Логіка для запуску відтворення
         Console.WriteLine($"Now playing: {song.Title}");
@@ -29,6 +33,7 @@ public class MusicPlayerController
         if (_playerState.CurrentState == PlaybackState.Playing)
         {
             _playerState.CurrentState = PlaybackState.Paused;
+            _musicPlayer.Pause();
             // Логіка для паузи
             Console.WriteLine("Playback paused.");
         }
@@ -38,6 +43,7 @@ public class MusicPlayerController
     {
         _playerState.CurrentState = PlaybackState.Stopped;
         _playerState.CurrentTime = TimeSpan.Zero;
+        _musicPlayer.Stop();
 
         // Логіка для зупинки
         Console.WriteLine("Playback stopped.");
@@ -45,7 +51,7 @@ public class MusicPlayerController
 
     public void Next()
     {
-        var currentIndex = _musicLibrary.Songs.IndexOf(_playerState.CurrentSong);
+        int currentIndex = _musicLibrary.Songs.IndexOf(_playerState.CurrentSong);
         if (currentIndex < _musicLibrary.Songs.Count - 1)
         {
             Play(_musicLibrary.Songs[currentIndex + 1]);
@@ -54,7 +60,7 @@ public class MusicPlayerController
 
     public void Previous()
     {
-        var currentIndex = _musicLibrary.Songs.IndexOf(_playerState.CurrentSong);
+        int currentIndex = _musicLibrary.Songs.IndexOf(_playerState.CurrentSong);
         if (currentIndex > 0)
         {
             Play(_musicLibrary.Songs[currentIndex - 1]);

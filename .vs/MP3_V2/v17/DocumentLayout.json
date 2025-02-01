@@ -1,0 +1,154 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\roman\\source\\repos\\MP3_V2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\musiclibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:musiclibrary.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|c:\\users\\roman\\source\\repos\\mp3_v2\\musicplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:musicplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\musicplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:musicplayercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\models\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:models\\playerstate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\models\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:models\\song.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|C:\\Users\\roman\\source\\repos\\MP3_V2\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{C2D48E26-7E09-430A-A28E-2CA857B53832}|MP3_V2.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 159,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MusicPlayer.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicPlayer.cs",
+              "RelativeDocumentMoniker": "MusicPlayer.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicPlayer.cs",
+              "RelativeToolTip": "MusicPlayer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T00:15:40.97Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T13:33:14.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-01-30T13:08:30.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Song.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\Models\\Song.cs",
+              "RelativeDocumentMoniker": "Models\\Song.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\Models\\Song.cs",
+              "RelativeToolTip": "Models\\Song.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T12:42:23.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PlayerState.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\Models\\PlayerState.cs",
+              "RelativeDocumentMoniker": "Models\\PlayerState.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\Models\\PlayerState.cs",
+              "RelativeToolTip": "Models\\PlayerState.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T12:42:22.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MusicPlayerController.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicPlayerController.cs",
+              "RelativeDocumentMoniker": "MusicPlayerController.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicPlayerController.cs",
+              "RelativeToolTip": "MusicPlayerController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAowEQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T12:42:08.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MusicLibrary.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicLibrary.cs",
+              "RelativeDocumentMoniker": "MusicLibrary.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MusicLibrary.cs",
+              "RelativeToolTip": "MusicLibrary.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T12:42:07.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\roman\\source\\repos\\MP3_V2\\MainWindowViewModel.cs",
+              "RelativeToolTip": "MainWindowViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-30T12:42:03.524Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

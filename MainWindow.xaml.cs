@@ -11,8 +11,14 @@ namespace MP3_V2
         public MainWindow()
         {
             InitializeComponent();
+            PlayerState playerState = new PlayerState();
             var musicLibrary = new MusicLibrary();
+            IMusicPlayer musicPlayer = new MusicPlayer();
             DataContext = new MainWindowViewModel(musicLibrary);
+
+            MusicPlayerController controller = new MusicPlayerController(playerState, musicLibrary, musicPlayer);
+
+            DataContext = new MainWindowViewModel(musicLibrary, musicPlayer);
         }
 
         private void AddToFavorites_Click(object sender, RoutedEventArgs e)

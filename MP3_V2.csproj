@@ -89,10 +89,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interfaces\IMusicPlayer.cs" />
     <Compile Include="Interfaces\IMusicLibrary.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="MusicLibrary.cs" />
     <Compile Include="Models\PlayerState.cs" />
+    <Compile Include="MusicPlayer.cs" />
     <Compile Include="MusicPlayerController.cs" />
     <Compile Include="RelayCommand.cs" />
     <Compile Include="Models\Song.cs" />

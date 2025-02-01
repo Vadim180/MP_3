@@ -5,34 +5,51 @@ using System.IO;
 using System.Linq;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.ComponentModel;
 
 namespace MP3_V2.Services
 {
-    public class MusicLibrary : IMusicLibrary
+    public class MusicLibrary : IMusicLibrary, INotifyPropertyChanged
     {
-        public ObservableCollection<Song> Songs { get; private set; }
+        private ObservableCollection<Song> _songs;
+
+        public ObservableCollection<Song> Songs
+        {
+            get => _songs;
+            private set
+            {
+                _songs = value;
+                OnPropertyChanged(nameof(Songs));
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public MusicLibrary()
         {
             Songs = new ObservableCollection<Song>();
         }
 
-        public void AddSong(Song song)  //відповідає за додавання об'єкта Song до колекції Songs
+        public void AddSong(Song song)
         {
-            if (song == null)
-                throw new ArgumentNullException(nameof(song));
+            if (song == null) throw new ArgumentNullException(nameof(song));
 
-            //перевіряє, чи немає вже пісні з таким самим шляхом до файлу (FilePath) у колекції Songs
             if (!Songs.Any(s => s.FilePath == song.FilePath))
             {
                 Songs.Add(song);
             }
         }
 
-
         public void RemoveSong(Song song)
         {
-            Songs.Remove(song);
+            if (Songs.Contains(song))
+            {
+                Songs.Remove(song);
+            }
         }
 
         public Song FindSongByPath(string filePath)
@@ -48,7 +65,7 @@ namespace MP3_V2.Services
                 {
                     if (new FileInfo(filePath).Length == 0)
                     {
-                        Songs = new ObservableCollection<Song>();
+                        Songs.Clear();
                         return;
                     }
 
@@ -58,29 +75,44 @@ namespace MP3_V2.Services
                         PropertyNameCaseInsensitive = true,
                         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
                     };
-                    Songs = JsonSerializer.Deserialize<ObservableCollection<Song>>(json, options);
+
+                    var loadedSongs = JsonSerializer.Deserialize<ObservableCollection<Song>>(json, options);
+                    Songs.Clear();
+                    if (loadedSongs != null)
+                    {
+                        foreach (var song in loadedSongs)
+                        {
+                            Songs.Add(song);
+                        }
+                    }
                 }
                 catch
                 {
-                    Songs = new ObservableCollection<Song>();
+                    Songs.Clear();
                 }
             }
             else
             {
-                Songs = new ObservableCollection<Song>();
+                Songs.Clear();
             }
         }
 
         public void SaveLibrary(string filePath)
         {
+            if (Songs == null || Songs.Count == 0)
+            {
+                File.WriteAllText(filePath, "[]"); // Записуємо порожній масив JSON
+                return;
+            }
+
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingDefault
             };
+
             string json = JsonSerializer.Serialize(Songs, options);
             File.WriteAllText(filePath, json);
         }
-
     }
 }
